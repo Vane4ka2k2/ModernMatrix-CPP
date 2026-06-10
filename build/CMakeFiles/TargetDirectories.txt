@@ -1,0 +1,5 @@
+/home/vm180/projects/NewMatrix/build/CMakeFiles/NewMatrix.dir
+/home/vm180/projects/NewMatrix/build/CMakeFiles/matrix_tests.dir
+/home/vm180/projects/NewMatrix/build/CMakeFiles/test.dir
+/home/vm180/projects/NewMatrix/build/CMakeFiles/edit_cache.dir
+/home/vm180/projects/NewMatrix/build/CMakeFiles/rebuild_cache.dir

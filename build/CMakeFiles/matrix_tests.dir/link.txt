@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/matrix_tests.dir/tests/test_matrix.cpp.o -o matrix_tests 

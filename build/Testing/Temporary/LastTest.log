@@ -1,0 +1,19 @@
+Start testing: Jun 11 01:49 MSK
+----------------------------------------------------------
+1/1 Testing: MatrixTests
+1/1 Test: MatrixTests
+Command: "/home/vm180/projects/NewMatrix/build/matrix_tests"
+Directory: /home/vm180/projects/NewMatrix/build
+"MatrixTests" start time: Jun 11 01:49 MSK
+Output:
+----------------------------------------------------------
+All tests passed.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MatrixTests" end time: Jun 11 01:49 MSK
+"MatrixTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 11 01:49 MSK

@@ -1,0 +1,2721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NewMatrix: Шаблон класса math::Matrix&lt; T, Rows, Cols, Allocator &gt;</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NewMatrix<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">C++ Matrix library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d0/d6f/classmath_1_1Matrix.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="../../dd/d75/classmath_1_1Matrix-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Шаблон класса math::Matrix&lt; T, Rows, Cols, Allocator &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../df/dce/matrix_8hpp_source.html">matrix.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса math::Matrix&lt; T, Rows, Cols, Allocator &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/de4/classmath_1_1Matrix__coll__graph.png" border="0" usemap="#amath_1_1Matrix_3_01T_00_01Rows_00_01Cols_00_01Allocator_01_4_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d58/structmath_1_1Matrix_1_1ConstRowProxy.html">ConstRowProxy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4b/structmath_1_1Matrix_1_1RowProxy.html">RowProxy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ae6f820edf41880a9d1ccbbed47078c7e" id="r_ae6f820edf41880a9d1ccbbed47078c7e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae6f820edf41880a9d1ccbbed47078c7e">value_type</a> = T</td></tr>
+<tr class="separator:ae6f820edf41880a9d1ccbbed47078c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b54f75bf01ab70c20d8e34da9d9dd53" id="r_a1b54f75bf01ab70c20d8e34da9d9dd53"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> = std::size_t</td></tr>
+<tr class="separator:a1b54f75bf01ab70c20d8e34da9d9dd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3599d1783793501556e75a1216fceab1" id="r_a3599d1783793501556e75a1216fceab1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a3599d1783793501556e75a1216fceab1">allocator_type</a> = Allocator</td></tr>
+<tr class="separator:a3599d1783793501556e75a1216fceab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2bb3167a66c1296b10558c7b85f51d" id="r_a0b2bb3167a66c1296b10558c7b85f51d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0b2bb3167a66c1296b10558c7b85f51d">iterator</a> = T *</td></tr>
+<tr class="separator:a0b2bb3167a66c1296b10558c7b85f51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11b877fe2ce353f87b5da16fe07fc26" id="r_ae11b877fe2ce353f87b5da16fe07fc26"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a> = const T *</td></tr>
+<tr class="separator:ae11b877fe2ce353f87b5da16fe07fc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1acb711d03a849ad020752e27d8d34" id="r_a3c1acb711d03a849ad020752e27d8d34"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a3c1acb711d03a849ad020752e27d8d34">reverse_iterator</a> = std::reverse_iterator&lt; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0b2bb3167a66c1296b10558c7b85f51d">iterator</a> &gt;</td></tr>
+<tr class="separator:a3c1acb711d03a849ad020752e27d8d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188f09fe9f4d2bb7ece4db5578514514" id="r_a188f09fe9f4d2bb7ece4db5578514514"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a188f09fe9f4d2bb7ece4db5578514514">const_reverse_iterator</a> = std::reverse_iterator&lt; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a> &gt;</td></tr>
+<tr class="separator:a188f09fe9f4d2bb7ece4db5578514514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a8cc7b439316cb76f0f615968537f7a53" id="r_a8cc7b439316cb76f0f615968537f7a53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a8cc7b439316cb76f0f615968537f7a53">Matrix</a> () noexcept</td></tr>
+<tr class="separator:a8cc7b439316cb76f0f615968537f7a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c66a2a748980933696a5703003cd26" id="r_a32c66a2a748980933696a5703003cd26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a32c66a2a748980933696a5703003cd26">Matrix</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a35e85058e46ae39e7324ac94ef883c6a">rows</a>, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aac4197f6aa1d31648293df103fb2136c">cols</a>)</td></tr>
+<tr class="separator:a32c66a2a748980933696a5703003cd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e06a1b73d26df93d8e108be38becdcd" id="r_a9e06a1b73d26df93d8e108be38becdcd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a9e06a1b73d26df93d8e108be38becdcd">Matrix</a> (std::initializer_list&lt; std::initializer_list&lt; T &gt; &gt; init)</td></tr>
+<tr class="separator:a9e06a1b73d26df93d8e108be38becdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80a55c3f43b111bff7a119d2a2ae539" id="r_af80a55c3f43b111bff7a119d2a2ae539"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#af80a55c3f43b111bff7a119d2a2ae539">Matrix</a> (const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;)=default</td></tr>
+<tr class="separator:af80a55c3f43b111bff7a119d2a2ae539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60e518745adbaac6e50c57528fb4056" id="r_ad60e518745adbaac6e50c57528fb4056"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ad60e518745adbaac6e50c57528fb4056">Matrix</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:ad60e518745adbaac6e50c57528fb4056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac72a476f6119435e66a3254bea243eb8" id="r_ac72a476f6119435e66a3254bea243eb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ac72a476f6119435e66a3254bea243eb8">operator=</a> (const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;)=default</td></tr>
+<tr class="separator:ac72a476f6119435e66a3254bea243eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaaca787fdba8bbd117068a97c9f4e5e" id="r_adaaca787fdba8bbd117068a97c9f4e5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#adaaca787fdba8bbd117068a97c9f4e5e">operator=</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:adaaca787fdba8bbd117068a97c9f4e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f99d325c49d77c5bb11fb641e43af96" id="r_a6f99d325c49d77c5bb11fb641e43af96"><td class="memTemplParams" colspan="2">template&lt;Arithmetic U, std::size_t R2, std::size_t C2, typename Alloc2 &gt; <br />
+requires std::convertible_to&lt;U, T&gt;</td></tr>
+<tr class="memitem:a6f99d325c49d77c5bb11fb641e43af96"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a6f99d325c49d77c5bb11fb641e43af96">Matrix</a> (const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; U, R2, C2, Alloc2 &gt; &amp;other)</td></tr>
+<tr class="separator:a6f99d325c49d77c5bb11fb641e43af96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0497ef8d7f2ea30dd2c4e29cf645efcd" id="r_a0497ef8d7f2ea30dd2c4e29cf645efcd"><td class="memTemplParams" colspan="2">template&lt;MatrixExpression E&gt; <br />
+requires std::convertible_to&lt;typename E::value_type, T&gt;</td></tr>
+<tr class="memitem:a0497ef8d7f2ea30dd2c4e29cf645efcd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0497ef8d7f2ea30dd2c4e29cf645efcd">Matrix</a> (const E &amp;expression)</td></tr>
+<tr class="separator:a0497ef8d7f2ea30dd2c4e29cf645efcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea0b732917bc4de29988376bf161ff8" id="r_a0ea0b732917bc4de29988376bf161ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0ea0b732917bc4de29988376bf161ff8">operator=</a> (MatrixExpression auto const &amp;expression)</td></tr>
+<tr class="separator:a0ea0b732917bc4de29988376bf161ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e85058e46ae39e7324ac94ef883c6a" id="r_a35e85058e46ae39e7324ac94ef883c6a"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a35e85058e46ae39e7324ac94ef883c6a">rows</a> () const noexcept</td></tr>
+<tr class="separator:a35e85058e46ae39e7324ac94ef883c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4197f6aa1d31648293df103fb2136c" id="r_aac4197f6aa1d31648293df103fb2136c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aac4197f6aa1d31648293df103fb2136c">cols</a> () const noexcept</td></tr>
+<tr class="separator:aac4197f6aa1d31648293df103fb2136c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550adac69e177e1e4c1da9ea559f0e55" id="r_a550adac69e177e1e4c1da9ea559f0e55"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a550adac69e177e1e4c1da9ea559f0e55">size</a> () const noexcept</td></tr>
+<tr class="separator:a550adac69e177e1e4c1da9ea559f0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639fe3b1480a2d42654e0e16b71206a5" id="r_a639fe3b1480a2d42654e0e16b71206a5"><td class="memItemLeft" align="right" valign="top">constexpr T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a639fe3b1480a2d42654e0e16b71206a5">data</a> () noexcept</td></tr>
+<tr class="separator:a639fe3b1480a2d42654e0e16b71206a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec5d6dcd25334d4fd434ef5057bd550" id="r_aeec5d6dcd25334d4fd434ef5057bd550"><td class="memItemLeft" align="right" valign="top">constexpr const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aeec5d6dcd25334d4fd434ef5057bd550">data</a> () const noexcept</td></tr>
+<tr class="separator:aeec5d6dcd25334d4fd434ef5057bd550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0caa84b7a697c37e0d12eee1c40a0316" id="r_a0caa84b7a697c37e0d12eee1c40a0316"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0caa84b7a697c37e0d12eee1c40a0316">data</a> () noexcept</td></tr>
+<tr class="separator:a0caa84b7a697c37e0d12eee1c40a0316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfa7fa9fe70f79e5750518a0f35e3cf" id="r_a0bfa7fa9fe70f79e5750518a0f35e3cf"><td class="memItemLeft" align="right" valign="top">const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0bfa7fa9fe70f79e5750518a0f35e3cf">data</a> () const noexcept</td></tr>
+<tr class="separator:a0bfa7fa9fe70f79e5750518a0f35e3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698c1c6e7ec2e775220a6193adce3eae" id="r_a698c1c6e7ec2e775220a6193adce3eae"><td class="memItemLeft" align="right" valign="top">constexpr std::span&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a698c1c6e7ec2e775220a6193adce3eae">row</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> i) noexcept</td></tr>
+<tr class="separator:a698c1c6e7ec2e775220a6193adce3eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76999f6038fa3ec0fed0f1f6af96fc27" id="r_a76999f6038fa3ec0fed0f1f6af96fc27"><td class="memItemLeft" align="right" valign="top">constexpr std::span&lt; const T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a76999f6038fa3ec0fed0f1f6af96fc27">row</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> i) const noexcept</td></tr>
+<tr class="separator:a76999f6038fa3ec0fed0f1f6af96fc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2603dc14f341ed635959ce675f05ac71" id="r_a2603dc14f341ed635959ce675f05ac71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d4b/structmath_1_1Matrix_1_1RowProxy.html">RowProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a2603dc14f341ed635959ce675f05ac71">operator[]</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> i)</td></tr>
+<tr class="separator:a2603dc14f341ed635959ce675f05ac71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879d3a0609d8f094cd7a50c947cfb6f8" id="r_a879d3a0609d8f094cd7a50c947cfb6f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d58/structmath_1_1Matrix_1_1ConstRowProxy.html">ConstRowProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a879d3a0609d8f094cd7a50c947cfb6f8">operator[]</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> i) const</td></tr>
+<tr class="separator:a879d3a0609d8f094cd7a50c947cfb6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89dd5ec3ddfeae2608d6bc096308f05" id="r_af89dd5ec3ddfeae2608d6bc096308f05"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#af89dd5ec3ddfeae2608d6bc096308f05">operator()</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> i, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> j)</td></tr>
+<tr class="separator:af89dd5ec3ddfeae2608d6bc096308f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c9074ed517055a56a32f707b215e33" id="r_a86c9074ed517055a56a32f707b215e33"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a86c9074ed517055a56a32f707b215e33">operator()</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> i, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> j) const</td></tr>
+<tr class="separator:a86c9074ed517055a56a32f707b215e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9bb5a6a93794eab8e24cbcd0b840a87" id="r_ae9bb5a6a93794eab8e24cbcd0b840a87"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae9bb5a6a93794eab8e24cbcd0b840a87">at</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> i, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> j)</td></tr>
+<tr class="separator:ae9bb5a6a93794eab8e24cbcd0b840a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ff2b226d06be8730eba42bf5d74d5c" id="r_a44ff2b226d06be8730eba42bf5d74d5c"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a44ff2b226d06be8730eba42bf5d74d5c">at</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> i, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> j) const</td></tr>
+<tr class="separator:a44ff2b226d06be8730eba42bf5d74d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae127a3580f96bd58f8fe3d49aa9b13a" id="r_aae127a3580f96bd58f8fe3d49aa9b13a"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0b2bb3167a66c1296b10558c7b85f51d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aae127a3580f96bd58f8fe3d49aa9b13a">begin</a> () noexcept</td></tr>
+<tr class="separator:aae127a3580f96bd58f8fe3d49aa9b13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f705bdc1f7a3f71090c32b67e5d5d3a" id="r_a0f705bdc1f7a3f71090c32b67e5d5d3a"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0b2bb3167a66c1296b10558c7b85f51d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0f705bdc1f7a3f71090c32b67e5d5d3a">end</a> () noexcept</td></tr>
+<tr class="separator:a0f705bdc1f7a3f71090c32b67e5d5d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a46e7460dfd2d7a408062de0287a0b" id="r_ad8a46e7460dfd2d7a408062de0287a0b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ad8a46e7460dfd2d7a408062de0287a0b">begin</a> () const noexcept</td></tr>
+<tr class="separator:ad8a46e7460dfd2d7a408062de0287a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef31f19e880a1ffdf3819495902c9020" id="r_aef31f19e880a1ffdf3819495902c9020"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aef31f19e880a1ffdf3819495902c9020">end</a> () const noexcept</td></tr>
+<tr class="separator:aef31f19e880a1ffdf3819495902c9020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014caf0d0ae78e3051bfda5f74eadbd9" id="r_a014caf0d0ae78e3051bfda5f74eadbd9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a014caf0d0ae78e3051bfda5f74eadbd9">cbegin</a> () const noexcept</td></tr>
+<tr class="separator:a014caf0d0ae78e3051bfda5f74eadbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d8f87a884a4938748c4c25fd412c13" id="r_ae2d8f87a884a4938748c4c25fd412c13"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae2d8f87a884a4938748c4c25fd412c13">cend</a> () const noexcept</td></tr>
+<tr class="separator:ae2d8f87a884a4938748c4c25fd412c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d3219035c209255454de7bfbecd541c" id="r_a6d3219035c209255454de7bfbecd541c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a3c1acb711d03a849ad020752e27d8d34">reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a6d3219035c209255454de7bfbecd541c">rbegin</a> () noexcept</td></tr>
+<tr class="separator:a6d3219035c209255454de7bfbecd541c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad9d2680770c3c341339f230e09a9d84" id="r_aad9d2680770c3c341339f230e09a9d84"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a3c1acb711d03a849ad020752e27d8d34">reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aad9d2680770c3c341339f230e09a9d84">rend</a> () noexcept</td></tr>
+<tr class="separator:aad9d2680770c3c341339f230e09a9d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51ec795ecbbfcfd7b6c7bd07492d1c71" id="r_a51ec795ecbbfcfd7b6c7bd07492d1c71"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a188f09fe9f4d2bb7ece4db5578514514">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a51ec795ecbbfcfd7b6c7bd07492d1c71">rbegin</a> () const noexcept</td></tr>
+<tr class="separator:a51ec795ecbbfcfd7b6c7bd07492d1c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c39743ecda19d1f1be79022b2b31602" id="r_a5c39743ecda19d1f1be79022b2b31602"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a188f09fe9f4d2bb7ece4db5578514514">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a5c39743ecda19d1f1be79022b2b31602">rend</a> () const noexcept</td></tr>
+<tr class="separator:a5c39743ecda19d1f1be79022b2b31602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab23564814a463e5e387287095d4ae455" id="r_ab23564814a463e5e387287095d4ae455"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ab23564814a463e5e387287095d4ae455">rows_view</a> () noexcept</td></tr>
+<tr class="separator:ab23564814a463e5e387287095d4ae455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac7fd830d97157b66e200df25765861" id="r_aaac7fd830d97157b66e200df25765861"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aaac7fd830d97157b66e200df25765861">rows_view</a> () const noexcept</td></tr>
+<tr class="separator:aaac7fd830d97157b66e200df25765861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8cd1d3c4ba410e90a0c0bca4510f17" id="r_a4b8cd1d3c4ba410e90a0c0bca4510f17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a4b8cd1d3c4ba410e90a0c0bca4510f17">operator+=</a> (const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="separator:a4b8cd1d3c4ba410e90a0c0bca4510f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46df6edeb6c5b672048d882b3089d47b" id="r_a46df6edeb6c5b672048d882b3089d47b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a46df6edeb6c5b672048d882b3089d47b">operator-=</a> (const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="separator:a46df6edeb6c5b672048d882b3089d47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77fcf2d46005c0ab31b763a1cb8b5d56" id="r_a77fcf2d46005c0ab31b763a1cb8b5d56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a77fcf2d46005c0ab31b763a1cb8b5d56">operator*=</a> (const T &amp;scalar)</td></tr>
+<tr class="separator:a77fcf2d46005c0ab31b763a1cb8b5d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6c31aeb0e4d21f4904dbe77c931896" id="r_adf6c31aeb0e4d21f4904dbe77c931896"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#adf6c31aeb0e4d21f4904dbe77c931896">operator/=</a> (const T &amp;scalar)</td></tr>
+<tr class="separator:adf6c31aeb0e4d21f4904dbe77c931896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e9d9a570988f3308360bd367b6ca3d5" id="r_a3e9d9a570988f3308360bd367b6ca3d5"><td class="memTemplParams" colspan="2">template&lt;MatrixExpression E&gt; <br />
+requires std::convertible_to&lt;typename E::value_type, T&gt;</td></tr>
+<tr class="memitem:a3e9d9a570988f3308360bd367b6ca3d5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a3e9d9a570988f3308360bd367b6ca3d5">operator+=</a> (const E &amp;expression)</td></tr>
+<tr class="separator:a3e9d9a570988f3308360bd367b6ca3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e66033a1aaa93bee487565e84972856" id="r_a3e66033a1aaa93bee487565e84972856"><td class="memTemplParams" colspan="2">template&lt;MatrixExpression E&gt; <br />
+requires std::convertible_to&lt;typename E::value_type, T&gt;</td></tr>
+<tr class="memitem:a3e66033a1aaa93bee487565e84972856"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a3e66033a1aaa93bee487565e84972856">operator-=</a> (const E &amp;expression)</td></tr>
+<tr class="separator:a3e66033a1aaa93bee487565e84972856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a60d9c16a1f720e6eb13b04b59e70b4" id="r_a5a60d9c16a1f720e6eb13b04b59e70b4"><td class="memTemplParams" colspan="2">template&lt;Arithmetic U, std::size_t R2, std::size_t C2, typename Alloc2 &gt; </td></tr>
+<tr class="memitem:a5a60d9c16a1f720e6eb13b04b59e70b4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a5a60d9c16a1f720e6eb13b04b59e70b4">operator*</a> (const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; U, R2, C2, Alloc2 &gt; &amp;other) const</td></tr>
+<tr class="separator:a5a60d9c16a1f720e6eb13b04b59e70b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5a7187647bd72776a7b3304fd94fb6" id="r_aff5a7187647bd72776a7b3304fd94fb6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aff5a7187647bd72776a7b3304fd94fb6">transpose</a> () const noexcept(<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#af4fff85de4262ef87a16d4f6907ded4a">is_static</a>)</td></tr>
+<tr class="separator:aff5a7187647bd72776a7b3304fd94fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34da51a387c70a30a542800d139dbba2" id="r_a34da51a387c70a30a542800d139dbba2"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a34da51a387c70a30a542800d139dbba2">trace</a> () const</td></tr>
+<tr class="separator:a34da51a387c70a30a542800d139dbba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe493c037043c0356d08e00e289e5f14" id="r_abe493c037043c0356d08e00e289e5f14"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#abe493c037043c0356d08e00e289e5f14">determinant</a> () const</td></tr>
+<tr class="separator:abe493c037043c0356d08e00e289e5f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5132e6ef5f538f25ff61777aabdc2b5f" id="r_a5132e6ef5f538f25ff61777aabdc2b5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a5132e6ef5f538f25ff61777aabdc2b5f">inverse</a> () const</td></tr>
+<tr class="separator:a5132e6ef5f538f25ff61777aabdc2b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12adc8f4f91947ce108ea04bcef9415" id="r_ab12adc8f4f91947ce108ea04bcef9415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ab12adc8f4f91947ce108ea04bcef9415">resize</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a35e85058e46ae39e7324ac94ef883c6a">rows</a>, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aac4197f6aa1d31648293df103fb2136c">cols</a>)</td></tr>
+<tr class="separator:ab12adc8f4f91947ce108ea04bcef9415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6af4fd6340712cbd788b297453e4202" id="r_ad6af4fd6340712cbd788b297453e4202"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ad6af4fd6340712cbd788b297453e4202">reserve</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> capacity)</td></tr>
+<tr class="separator:ad6af4fd6340712cbd788b297453e4202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b73b788f4783a7cff789f19da31ea0a" id="r_a9b73b788f4783a7cff789f19da31ea0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a9b73b788f4783a7cff789f19da31ea0a">shrink_to_fit</a> ()</td></tr>
+<tr class="separator:a9b73b788f4783a7cff789f19da31ea0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ecaaa806ca0a9dddc09429e4de314e1" id="r_a1ecaaa806ca0a9dddc09429e4de314e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1ecaaa806ca0a9dddc09429e4de314e1">swap</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;other) noexcept(std::is_nothrow_swappable_v&lt; storage_type &gt;)</td></tr>
+<tr class="separator:a1ecaaa806ca0a9dddc09429e4de314e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22f29ceec53922fc2abea726496a812" id="r_ab22f29ceec53922fc2abea726496a812"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ab22f29ceec53922fc2abea726496a812">operator==</a> (const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;other) const</td></tr>
+<tr class="separator:ab22f29ceec53922fc2abea726496a812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4239b7ea0df52b6171ab8f2adc904d93" id="r_a4239b7ea0df52b6171ab8f2adc904d93"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a4239b7ea0df52b6171ab8f2adc904d93">operator&lt;=&gt;</a> (const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;other) const</td></tr>
+<tr class="separator:a4239b7ea0df52b6171ab8f2adc904d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf0321e6482517270b0be44fd1501c7" id="r_a2cf0321e6482517270b0be44fd1501c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a2cf0321e6482517270b0be44fd1501c7">write_binary</a> (std::ostream &amp;os) const</td></tr>
+<tr class="separator:a2cf0321e6482517270b0be44fd1501c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ebb85d37a14e6713c713a1ac5b0923" id="r_a74ebb85d37a14e6713c713a1ac5b0923"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a74ebb85d37a14e6713c713a1ac5b0923">read_binary</a> (std::istream &amp;is)</td></tr>
+<tr class="separator:a74ebb85d37a14e6713c713a1ac5b0923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ad5460126700912a5af1331a33d4a5147" id="r_ad5460126700912a5af1331a33d4a5147"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ad5460126700912a5af1331a33d4a5147">zeros</a> ()</td></tr>
+<tr class="separator:ad5460126700912a5af1331a33d4a5147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6612febc38725c55a25c352c699d12a8" id="r_a6612febc38725c55a25c352c699d12a8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a6612febc38725c55a25c352c699d12a8">zeros</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a35e85058e46ae39e7324ac94ef883c6a">rows</a>, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aac4197f6aa1d31648293df103fb2136c">cols</a>)</td></tr>
+<tr class="separator:a6612febc38725c55a25c352c699d12a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a56145b8f91e5649e70a593996f7af" id="r_a22a56145b8f91e5649e70a593996f7af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a22a56145b8f91e5649e70a593996f7af">ones</a> ()</td></tr>
+<tr class="separator:a22a56145b8f91e5649e70a593996f7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f43bedf3a52956b84c345c131fc88e1" id="r_a2f43bedf3a52956b84c345c131fc88e1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a2f43bedf3a52956b84c345c131fc88e1">ones</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a35e85058e46ae39e7324ac94ef883c6a">rows</a>, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aac4197f6aa1d31648293df103fb2136c">cols</a>)</td></tr>
+<tr class="separator:a2f43bedf3a52956b84c345c131fc88e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67fe124edb2c85bcab4c1f3a6e4f56d3" id="r_a67fe124edb2c85bcab4c1f3a6e4f56d3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a67fe124edb2c85bcab4c1f3a6e4f56d3">fill</a> (const T &amp;value)</td></tr>
+<tr class="separator:a67fe124edb2c85bcab4c1f3a6e4f56d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeefefc278ff34a7c4fd70d278afbccc5" id="r_aeefefc278ff34a7c4fd70d278afbccc5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aeefefc278ff34a7c4fd70d278afbccc5">fill</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a35e85058e46ae39e7324ac94ef883c6a">rows</a>, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aac4197f6aa1d31648293df103fb2136c">cols</a>, const T &amp;value)</td></tr>
+<tr class="separator:aeefefc278ff34a7c4fd70d278afbccc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ff7daf28324a097f67f63510d9f993" id="r_a98ff7daf28324a097f67f63510d9f993"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a98ff7daf28324a097f67f63510d9f993">identity</a> ()</td></tr>
+<tr class="separator:a98ff7daf28324a097f67f63510d9f993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa4ddb01da9571a6ea7773464fa0842" id="r_acaa4ddb01da9571a6ea7773464fa0842"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#acaa4ddb01da9571a6ea7773464fa0842">identity</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> n)</td></tr>
+<tr class="separator:acaa4ddb01da9571a6ea7773464fa0842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1020f5202d24a502f008109f2e37a3a9" id="r_a1020f5202d24a502f008109f2e37a3a9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1020f5202d24a502f008109f2e37a3a9">from_diag</a> (std::initializer_list&lt; T &gt; diag)</td></tr>
+<tr class="separator:a1020f5202d24a502f008109f2e37a3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f88631023c1ef68ed687764e69324ea" id="r_a4f88631023c1ef68ed687764e69324ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a4f88631023c1ef68ed687764e69324ea">from_diag</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> n, const T &amp;value)</td></tr>
+<tr class="separator:a4f88631023c1ef68ed687764e69324ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:abf8216c3015e6e0e7b9bd64473aaba5e" id="r_abf8216c3015e6e0e7b9bd64473aaba5e"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#abf8216c3015e6e0e7b9bd64473aaba5e">rows_static</a> = Rows</td></tr>
+<tr class="separator:abf8216c3015e6e0e7b9bd64473aaba5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e63f5e504d48c293a653005b62e30a" id="r_a63e63f5e504d48c293a653005b62e30a"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a63e63f5e504d48c293a653005b62e30a">cols_static</a> = Cols</td></tr>
+<tr class="separator:a63e63f5e504d48c293a653005b62e30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349040669cd49af113c870155cdd5937" id="r_a349040669cd49af113c870155cdd5937"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a349040669cd49af113c870155cdd5937">has_static_rows</a> = Rows != <a class="el" href="../../dd/d47/namespacemath.html#a7e0cfb999ef115bbbcfe08b7d420c1e2">Dynamic</a></td></tr>
+<tr class="separator:a349040669cd49af113c870155cdd5937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6efcb654c1cd6b3b42d874deef64dc9" id="r_ae6efcb654c1cd6b3b42d874deef64dc9"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae6efcb654c1cd6b3b42d874deef64dc9">has_static_cols</a> = Cols != <a class="el" href="../../dd/d47/namespacemath.html#a7e0cfb999ef115bbbcfe08b7d420c1e2">Dynamic</a></td></tr>
+<tr class="separator:ae6efcb654c1cd6b3b42d874deef64dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4fff85de4262ef87a16d4f6907ded4a" id="r_af4fff85de4262ef87a16d4f6907ded4a"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#af4fff85de4262ef87a16d4f6907ded4a">is_static</a> = <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a349040669cd49af113c870155cdd5937">has_static_rows</a> &amp;&amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae6efcb654c1cd6b3b42d874deef64dc9">has_static_cols</a></td></tr>
+<tr class="separator:af4fff85de4262ef87a16d4f6907ded4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbf9fc37a52599a5fe06ad82a688c51" id="r_aabbf9fc37a52599a5fe06ad82a688c51"><td class="memItemLeft" align="right" valign="top">static constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aabbf9fc37a52599a5fe06ad82a688c51">epsilon</a> = <a class="el" href="../../d7/d85/namespacemath_1_1detail.html#a8aab65580474c6cf3d60237cbabf499f">detail::default_epsilon</a>&lt;T&gt;()</td></tr>
+<tr class="separator:aabbf9fc37a52599a5fe06ad82a688c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a548660d6103ef18a40ded35e431b8560" id="r_a548660d6103ef18a40ded35e431b8560"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a548660d6103ef18a40ded35e431b8560">operator+</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> lhs, const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;rhs)</td></tr>
+<tr class="separator:a548660d6103ef18a40ded35e431b8560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5027617c2b62ec8d534ecd114617d0e" id="r_ad5027617c2b62ec8d534ecd114617d0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ad5027617c2b62ec8d534ecd114617d0e">operator-</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> lhs, const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp;rhs)</td></tr>
+<tr class="separator:ad5027617c2b62ec8d534ecd114617d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab0f71ed6c66aea3643ad4968285fbdc" id="r_aab0f71ed6c66aea3643ad4968285fbdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#aab0f71ed6c66aea3643ad4968285fbdc">operator*</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> lhs, const T &amp;scalar)</td></tr>
+<tr class="separator:aab0f71ed6c66aea3643ad4968285fbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7ad5b2701183a88e1b2dfeb183edad" id="r_add7ad5b2701183a88e1b2dfeb183edad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#add7ad5b2701183a88e1b2dfeb183edad">operator*</a> (const T &amp;scalar, <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> rhs)</td></tr>
+<tr class="separator:add7ad5b2701183a88e1b2dfeb183edad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6546d3949f963555296c8430945790" id="r_a6d6546d3949f963555296c8430945790"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a6d6546d3949f963555296c8430945790">operator/</a> (<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> lhs, const T &amp;scalar)</td></tr>
+<tr class="separator:a6d6546d3949f963555296c8430945790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a3599d1783793501556e75a1216fceab1" name="a3599d1783793501556e75a1216fceab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3599d1783793501556e75a1216fceab1">&#9670;&#160;</a></span>allocator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::allocator_type =  Allocator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae11b877fe2ce353f87b5da16fe07fc26" name="ae11b877fe2ce353f87b5da16fe07fc26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11b877fe2ce353f87b5da16fe07fc26">&#9670;&#160;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::const_iterator =  const T*</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a188f09fe9f4d2bb7ece4db5578514514" name="a188f09fe9f4d2bb7ece4db5578514514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188f09fe9f4d2bb7ece4db5578514514">&#9670;&#160;</a></span>const_reverse_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::const_reverse_iterator =  std::reverse_iterator&lt;<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b2bb3167a66c1296b10558c7b85f51d" name="a0b2bb3167a66c1296b10558c7b85f51d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2bb3167a66c1296b10558c7b85f51d">&#9670;&#160;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::iterator =  T*</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c1acb711d03a849ad020752e27d8d34" name="a3c1acb711d03a849ad020752e27d8d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1acb711d03a849ad020752e27d8d34">&#9670;&#160;</a></span>reverse_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::reverse_iterator =  std::reverse_iterator&lt;<a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0b2bb3167a66c1296b10558c7b85f51d">iterator</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b54f75bf01ab70c20d8e34da9d9dd53" name="a1b54f75bf01ab70c20d8e34da9d9dd53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b54f75bf01ab70c20d8e34da9d9dd53">&#9670;&#160;</a></span>size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::size_type =  std::size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6f820edf41880a9d1ccbbed47078c7e" name="ae6f820edf41880a9d1ccbbed47078c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f820edf41880a9d1ccbbed47078c7e">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::value_type =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a8cc7b439316cb76f0f615968537f7a53" name="a8cc7b439316cb76f0f615968537f7a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc7b439316cb76f0f615968537f7a53">&#9670;&#160;</a></span>Matrix() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::Matrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32c66a2a748980933696a5703003cd26" name="a32c66a2a748980933696a5703003cd26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c66a2a748980933696a5703003cd26">&#9670;&#160;</a></span>Matrix() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::Matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e06a1b73d26df93d8e108be38becdcd" name="a9e06a1b73d26df93d8e108be38becdcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e06a1b73d26df93d8e108be38becdcd">&#9670;&#160;</a></span>Matrix() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; std::initializer_list&lt; T &gt; &gt;&#160;</td>
+          <td class="paramname"><em>init</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af80a55c3f43b111bff7a119d2a2ae539" name="af80a55c3f43b111bff7a119d2a2ae539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80a55c3f43b111bff7a119d2a2ae539">&#9670;&#160;</a></span>Matrix() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad60e518745adbaac6e50c57528fb4056" name="ad60e518745adbaac6e50c57528fb4056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60e518745adbaac6e50c57528fb4056">&#9670;&#160;</a></span>Matrix() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::Matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f99d325c49d77c5bb11fb641e43af96" name="a6f99d325c49d77c5bb11fb641e43af96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f99d325c49d77c5bb11fb641e43af96">&#9670;&#160;</a></span>Matrix() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;Arithmetic U, std::size_t R2, std::size_t C2, typename Alloc2 &gt; <br />
+requires std::convertible_to&lt;U, T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; U, R2, C2, Alloc2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0497ef8d7f2ea30dd2c4e29cf645efcd" name="a0497ef8d7f2ea30dd2c4e29cf645efcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0497ef8d7f2ea30dd2c4e29cf645efcd">&#9670;&#160;</a></span>Matrix() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;MatrixExpression E&gt; <br />
+requires std::convertible_to&lt;typename E::value_type, T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">const E &amp;&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ae9bb5a6a93794eab8e24cbcd0b840a87" name="ae9bb5a6a93794eab8e24cbcd0b840a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9bb5a6a93794eab8e24cbcd0b840a87">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44ff2b226d06be8730eba42bf5d74d5c" name="a44ff2b226d06be8730eba42bf5d74d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ff2b226d06be8730eba42bf5d74d5c">&#9670;&#160;</a></span>at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8a46e7460dfd2d7a408062de0287a0b" name="ad8a46e7460dfd2d7a408062de0287a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a46e7460dfd2d7a408062de0287a0b">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae127a3580f96bd58f8fe3d49aa9b13a" name="aae127a3580f96bd58f8fe3d49aa9b13a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae127a3580f96bd58f8fe3d49aa9b13a">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0b2bb3167a66c1296b10558c7b85f51d">iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a014caf0d0ae78e3051bfda5f74eadbd9" name="a014caf0d0ae78e3051bfda5f74eadbd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a014caf0d0ae78e3051bfda5f74eadbd9">&#9670;&#160;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2d8f87a884a4938748c4c25fd412c13" name="ae2d8f87a884a4938748c4c25fd412c13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d8f87a884a4938748c4c25fd412c13">&#9670;&#160;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac4197f6aa1d31648293df103fb2136c" name="aac4197f6aa1d31648293df103fb2136c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac4197f6aa1d31648293df103fb2136c">&#9670;&#160;</a></span>cols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::cols </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeec5d6dcd25334d4fd434ef5057bd550" name="aeec5d6dcd25334d4fd434ef5057bd550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec5d6dcd25334d4fd434ef5057bd550">&#9670;&#160;</a></span>data() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const T * <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bfa7fa9fe70f79e5750518a0f35e3cf" name="a0bfa7fa9fe70f79e5750518a0f35e3cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfa7fa9fe70f79e5750518a0f35e3cf">&#9670;&#160;</a></span>data() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T * <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a639fe3b1480a2d42654e0e16b71206a5" name="a639fe3b1480a2d42654e0e16b71206a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639fe3b1480a2d42654e0e16b71206a5">&#9670;&#160;</a></span>data() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T * <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0caa84b7a697c37e0d12eee1c40a0316" name="a0caa84b7a697c37e0d12eee1c40a0316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0caa84b7a697c37e0d12eee1c40a0316">&#9670;&#160;</a></span>data() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe493c037043c0356d08e00e289e5f14" name="abe493c037043c0356d08e00e289e5f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe493c037043c0356d08e00e289e5f14">&#9670;&#160;</a></span>determinant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::determinant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef31f19e880a1ffdf3819495902c9020" name="aef31f19e880a1ffdf3819495902c9020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef31f19e880a1ffdf3819495902c9020">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae11b877fe2ce353f87b5da16fe07fc26">const_iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f705bdc1f7a3f71090c32b67e5d5d3a" name="a0f705bdc1f7a3f71090c32b67e5d5d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f705bdc1f7a3f71090c32b67e5d5d3a">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a0b2bb3167a66c1296b10558c7b85f51d">iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67fe124edb2c85bcab4c1f3a6e4f56d3" name="a67fe124edb2c85bcab4c1f3a6e4f56d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67fe124edb2c85bcab4c1f3a6e4f56d3">&#9670;&#160;</a></span>fill() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::fill </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeefefc278ff34a7c4fd70d278afbccc5" name="aeefefc278ff34a7c4fd70d278afbccc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeefefc278ff34a7c4fd70d278afbccc5">&#9670;&#160;</a></span>fill() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f88631023c1ef68ed687764e69324ea" name="a4f88631023c1ef68ed687764e69324ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f88631023c1ef68ed687764e69324ea">&#9670;&#160;</a></span>from_diag() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::from_diag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Создаёт диагональную динамическую матрицу размером n x n, заполняя диагональ одним значением. </p>
+
+</div>
+</div>
+<a id="a1020f5202d24a502f008109f2e37a3a9" name="a1020f5202d24a502f008109f2e37a3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1020f5202d24a502f008109f2e37a3a9">&#9670;&#160;</a></span>from_diag() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::from_diag </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>diag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Создаёт диагональную матрицу из списка значений диагонали. Для динамических матриц размер устанавливается по длине списка. </p>
+
+</div>
+</div>
+<a id="a98ff7daf28324a097f67f63510d9f993" name="a98ff7daf28324a097f67f63510d9f993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ff7daf28324a097f67f63510d9f993">&#9670;&#160;</a></span>identity() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::identity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acaa4ddb01da9571a6ea7773464fa0842" name="acaa4ddb01da9571a6ea7773464fa0842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa4ddb01da9571a6ea7773464fa0842">&#9670;&#160;</a></span>identity() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::identity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5132e6ef5f538f25ff61777aabdc2b5f" name="a5132e6ef5f538f25ff61777aabdc2b5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5132e6ef5f538f25ff61777aabdc2b5f">&#9670;&#160;</a></span>inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::inverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22a56145b8f91e5649e70a593996f7af" name="a22a56145b8f91e5649e70a593996f7af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a56145b8f91e5649e70a593996f7af">&#9670;&#160;</a></span>ones() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::ones </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f43bedf3a52956b84c345c131fc88e1" name="a2f43bedf3a52956b84c345c131fc88e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f43bedf3a52956b84c345c131fc88e1">&#9670;&#160;</a></span>ones() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::ones </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af89dd5ec3ddfeae2608d6bc096308f05" name="af89dd5ec3ddfeae2608d6bc096308f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89dd5ec3ddfeae2608d6bc096308f05">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86c9074ed517055a56a32f707b215e33" name="a86c9074ed517055a56a32f707b215e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c9074ed517055a56a32f707b215e33">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a60d9c16a1f720e6eb13b04b59e70b4" name="a5a60d9c16a1f720e6eb13b04b59e70b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a60d9c16a1f720e6eb13b04b59e70b4">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;Arithmetic U, std::size_t R2, std::size_t C2, typename Alloc2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; U, R2, C2, Alloc2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77fcf2d46005c0ab31b763a1cb8b5d56" name="a77fcf2d46005c0ab31b763a1cb8b5d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77fcf2d46005c0ab31b763a1cb8b5d56">&#9670;&#160;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e9d9a570988f3308360bd367b6ca3d5" name="a3e9d9a570988f3308360bd367b6ca3d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e9d9a570988f3308360bd367b6ca3d5">&#9670;&#160;</a></span>operator+=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;MatrixExpression E&gt; <br />
+requires std::convertible_to&lt;typename E::value_type, T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const E &amp;&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b8cd1d3c4ba410e90a0c0bca4510f17" name="a4b8cd1d3c4ba410e90a0c0bca4510f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8cd1d3c4ba410e90a0c0bca4510f17">&#9670;&#160;</a></span>operator+=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e66033a1aaa93bee487565e84972856" name="a3e66033a1aaa93bee487565e84972856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e66033a1aaa93bee487565e84972856">&#9670;&#160;</a></span>operator-=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;MatrixExpression E&gt; <br />
+requires std::convertible_to&lt;typename E::value_type, T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const E &amp;&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46df6edeb6c5b672048d882b3089d47b" name="a46df6edeb6c5b672048d882b3089d47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46df6edeb6c5b672048d882b3089d47b">&#9670;&#160;</a></span>operator-=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf6c31aeb0e4d21f4904dbe77c931896" name="adf6c31aeb0e4d21f4904dbe77c931896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6c31aeb0e4d21f4904dbe77c931896">&#9670;&#160;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4239b7ea0df52b6171ab8f2adc904d93" name="a4239b7ea0df52b6171ab8f2adc904d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4239b7ea0df52b6171ab8f2adc904d93">&#9670;&#160;</a></span>operator&lt;=&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator&lt;=&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Лексикографическое сравнение матриц. Сначала сравниваются размеры, затем элементы по порядку. </p>
+
+</div>
+</div>
+<a id="ac72a476f6119435e66a3254bea243eb8" name="ac72a476f6119435e66a3254bea243eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72a476f6119435e66a3254bea243eb8">&#9670;&#160;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaaca787fdba8bbd117068a97c9f4e5e" name="adaaca787fdba8bbd117068a97c9f4e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaca787fdba8bbd117068a97c9f4e5e">&#9670;&#160;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ea0b732917bc4de29988376bf161ff8" name="a0ea0b732917bc4de29988376bf161ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea0b732917bc4de29988376bf161ff8">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> &amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">MatrixExpression auto const &amp;&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab22f29ceec53922fc2abea726496a812" name="ab22f29ceec53922fc2abea726496a812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22f29ceec53922fc2abea726496a812">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Сравнение матриц на равенство. Для плавающих типов используется сравнение с допустимой погрешностью. </p>
+
+</div>
+</div>
+<a id="a2603dc14f341ed635959ce675f05ac71" name="a2603dc14f341ed635959ce675f05ac71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2603dc14f341ed635959ce675f05ac71">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d4b/structmath_1_1Matrix_1_1RowProxy.html">RowProxy</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a879d3a0609d8f094cd7a50c947cfb6f8" name="a879d3a0609d8f094cd7a50c947cfb6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879d3a0609d8f094cd7a50c947cfb6f8">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d58/structmath_1_1Matrix_1_1ConstRowProxy.html">ConstRowProxy</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51ec795ecbbfcfd7b6c7bd07492d1c71" name="a51ec795ecbbfcfd7b6c7bd07492d1c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ec795ecbbfcfd7b6c7bd07492d1c71">&#9670;&#160;</a></span>rbegin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a188f09fe9f4d2bb7ece4db5578514514">const_reverse_iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::rbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d3219035c209255454de7bfbecd541c" name="a6d3219035c209255454de7bfbecd541c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d3219035c209255454de7bfbecd541c">&#9670;&#160;</a></span>rbegin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a3c1acb711d03a849ad020752e27d8d34">reverse_iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::rbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74ebb85d37a14e6713c713a1ac5b0923" name="a74ebb85d37a14e6713c713a1ac5b0923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ebb85d37a14e6713c713a1ac5b0923">&#9670;&#160;</a></span>read_binary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::read_binary </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Загружает матрицу из бинарного формата. Для статической матрицы размеры должны совпадать. </p>
+
+</div>
+</div>
+<a id="a5c39743ecda19d1f1be79022b2b31602" name="a5c39743ecda19d1f1be79022b2b31602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c39743ecda19d1f1be79022b2b31602">&#9670;&#160;</a></span>rend() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a188f09fe9f4d2bb7ece4db5578514514">const_reverse_iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::rend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad9d2680770c3c341339f230e09a9d84" name="aad9d2680770c3c341339f230e09a9d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad9d2680770c3c341339f230e09a9d84">&#9670;&#160;</a></span>rend() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a3c1acb711d03a849ad020752e27d8d34">reverse_iterator</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::rend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6af4fd6340712cbd788b297453e4202" name="ad6af4fd6340712cbd788b297453e4202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6af4fd6340712cbd788b297453e4202">&#9670;&#160;</a></span>reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::reserve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>capacity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab12adc8f4f91947ce108ea04bcef9415" name="ab12adc8f4f91947ce108ea04bcef9415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab12adc8f4f91947ce108ea04bcef9415">&#9670;&#160;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76999f6038fa3ec0fed0f1f6af96fc27" name="a76999f6038fa3ec0fed0f1f6af96fc27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76999f6038fa3ec0fed0f1f6af96fc27">&#9670;&#160;</a></span>row() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::span&lt; const T &gt; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::row </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a698c1c6e7ec2e775220a6193adce3eae" name="a698c1c6e7ec2e775220a6193adce3eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a698c1c6e7ec2e775220a6193adce3eae">&#9670;&#160;</a></span>row() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::span&lt; T &gt; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::row </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35e85058e46ae39e7324ac94ef883c6a" name="a35e85058e46ae39e7324ac94ef883c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e85058e46ae39e7324ac94ef883c6a">&#9670;&#160;</a></span>rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::rows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaac7fd830d97157b66e200df25765861" name="aaac7fd830d97157b66e200df25765861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaac7fd830d97157b66e200df25765861">&#9670;&#160;</a></span>rows_view() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::rows_view </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab23564814a463e5e387287095d4ae455" name="ab23564814a463e5e387287095d4ae455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23564814a463e5e387287095d4ae455">&#9670;&#160;</a></span>rows_view() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::rows_view </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b73b788f4783a7cff789f19da31ea0a" name="a9b73b788f4783a7cff789f19da31ea0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b73b788f4783a7cff789f19da31ea0a">&#9670;&#160;</a></span>shrink_to_fit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::shrink_to_fit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a550adac69e177e1e4c1da9ea559f0e55" name="a550adac69e177e1e4c1da9ea559f0e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a550adac69e177e1e4c1da9ea559f0e55">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ecaaa806ca0a9dddc09429e4de314e1" name="a1ecaaa806ca0a9dddc09429e4de314e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ecaaa806ca0a9dddc09429e4de314e1">&#9670;&#160;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34da51a387c70a30a542800d139dbba2" name="a34da51a387c70a30a542800d139dbba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34da51a387c70a30a542800d139dbba2">&#9670;&#160;</a></span>trace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::trace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff5a7187647bd72776a7b3304fd94fb6" name="aff5a7187647bd72776a7b3304fd94fb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff5a7187647bd72776a7b3304fd94fb6">&#9670;&#160;</a></span>transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cf0321e6482517270b0be44fd1501c7" name="a2cf0321e6482517270b0be44fd1501c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf0321e6482517270b0be44fd1501c7">&#9670;&#160;</a></span>write_binary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::write_binary </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Записывает матрицу в бинарном формате: размеры в виде двух uint64_t, затем данные элементов. </p>
+
+</div>
+</div>
+<a id="ad5460126700912a5af1331a33d4a5147" name="ad5460126700912a5af1331a33d4a5147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5460126700912a5af1331a33d4a5147">&#9670;&#160;</a></span>zeros() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::zeros </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6612febc38725c55a25c352c699d12a8" name="a6612febc38725c55a25c352c699d12a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6612febc38725c55a25c352c699d12a8">&#9670;&#160;</a></span>zeros() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::zeros </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a>&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="add7ad5b2701183a88e1b2dfeb183edad" name="add7ad5b2701183a88e1b2dfeb183edad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7ad5b2701183a88e1b2dfeb183edad">&#9670;&#160;</a></span>operator* <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab0f71ed6c66aea3643ad4968285fbdc" name="aab0f71ed6c66aea3643ad4968285fbdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0f71ed6c66aea3643ad4968285fbdc">&#9670;&#160;</a></span>operator* <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a548660d6103ef18a40ded35e431b8560" name="a548660d6103ef18a40ded35e431b8560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548660d6103ef18a40ded35e431b8560">&#9670;&#160;</a></span>operator+</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5027617c2b62ec8d534ecd114617d0e" name="ad5027617c2b62ec8d534ecd114617d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5027617c2b62ec8d534ecd114617d0e">&#9670;&#160;</a></span>operator-</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d6546d3949f963555296c8430945790" name="a6d6546d3949f963555296c8430945790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6546d3949f963555296c8430945790">&#9670;&#160;</a></span>operator/</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a> operator/ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a>&lt; T, Rows, Cols, Allocator &gt;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a63e63f5e504d48c293a653005b62e30a" name="a63e63f5e504d48c293a653005b62e30a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63e63f5e504d48c293a653005b62e30a">&#9670;&#160;</a></span>cols_static</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::cols_static = Cols</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aabbf9fc37a52599a5fe06ad82a688c51" name="aabbf9fc37a52599a5fe06ad82a688c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbf9fc37a52599a5fe06ad82a688c51">&#9670;&#160;</a></span>epsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::epsilon = <a class="el" href="../../d7/d85/namespacemath_1_1detail.html#a8aab65580474c6cf3d60237cbabf499f">detail::default_epsilon</a>&lt;T&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6efcb654c1cd6b3b42d874deef64dc9" name="ae6efcb654c1cd6b3b42d874deef64dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6efcb654c1cd6b3b42d874deef64dc9">&#9670;&#160;</a></span>has_static_cols</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::has_static_cols = Cols != <a class="el" href="../../dd/d47/namespacemath.html#a7e0cfb999ef115bbbcfe08b7d420c1e2">Dynamic</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a349040669cd49af113c870155cdd5937" name="a349040669cd49af113c870155cdd5937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349040669cd49af113c870155cdd5937">&#9670;&#160;</a></span>has_static_rows</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::has_static_rows = Rows != <a class="el" href="../../dd/d47/namespacemath.html#a7e0cfb999ef115bbbcfe08b7d420c1e2">Dynamic</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4fff85de4262ef87a16d4f6907ded4a" name="af4fff85de4262ef87a16d4f6907ded4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4fff85de4262ef87a16d4f6907ded4a">&#9670;&#160;</a></span>is_static</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::is_static = <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a349040669cd49af113c870155cdd5937">has_static_rows</a> &amp;&amp; <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#ae6efcb654c1cd6b3b42d874deef64dc9">has_static_cols</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf8216c3015e6e0e7b9bd64473aaba5e" name="abf8216c3015e6e0e7b9bd64473aaba5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8216c3015e6e0e7b9bd64473aaba5e">&#9670;&#160;</a></span>rows_static</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Arithmetic T, std::size_t Rows = Dynamic, std::size_t Cols = Dynamic, typename Allocator  = std::pmr::polymorphic_allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html#a1b54f75bf01ab70c20d8e34da9d9dd53">size_type</a> <a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">math::Matrix</a>&lt; T, Rows, Cols, Allocator &gt;::rows_static = Rows</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="../../df/dce/matrix_8hpp_source.html">matrix.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dd/d47/namespacemath.html">math</a></li><li class="navelem"><a class="el" href="../../d0/d6f/classmath_1_1Matrix.html">Matrix</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

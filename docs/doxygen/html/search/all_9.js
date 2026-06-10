@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['math_0',['math',['../dd/d47/namespacemath.html',1,'']]],
+  ['math_3a_3aarithmetic_1',['Arithmetic',['../d1/d33/conceptmath_1_1Arithmetic.html',1,'math']]],
+  ['math_3a_3adetail_2',['detail',['../d7/d85/namespacemath_1_1detail.html',1,'math']]],
+  ['math_3a_3adetail_3a_3athreewaycomparable_3',['ThreeWayComparable',['../dd/d82/conceptmath_1_1detail_1_1ThreeWayComparable.html',1,'math::detail']]],
+  ['math_3a_3amatrixexpression_4',['MatrixExpression',['../da/df2/conceptmath_1_1MatrixExpression.html',1,'math']]],
+  ['matrix_5',['matrix',['../d0/d6f/classmath_1_1Matrix.html',1,'math::Matrix&lt; T, Rows, Cols, Allocator &gt;'],['../d0/d6f/classmath_1_1Matrix.html#a8cc7b439316cb76f0f615968537f7a53',1,'math::Matrix::Matrix() noexcept'],['../d0/d6f/classmath_1_1Matrix.html#a32c66a2a748980933696a5703003cd26',1,'math::Matrix::Matrix(size_type rows, size_type cols)'],['../d0/d6f/classmath_1_1Matrix.html#a9e06a1b73d26df93d8e108be38becdcd',1,'math::Matrix::Matrix(std::initializer_list&lt; std::initializer_list&lt; T &gt; &gt; init)'],['../d0/d6f/classmath_1_1Matrix.html#af80a55c3f43b111bff7a119d2a2ae539',1,'math::Matrix::Matrix(const Matrix &amp;)=default'],['../d0/d6f/classmath_1_1Matrix.html#ad60e518745adbaac6e50c57528fb4056',1,'math::Matrix::Matrix(Matrix &amp;&amp;) noexcept=default'],['../d0/d6f/classmath_1_1Matrix.html#a6f99d325c49d77c5bb11fb641e43af96',1,'math::Matrix::Matrix(const Matrix&lt; U, R2, C2, Alloc2 &gt; &amp;other)'],['../d0/d6f/classmath_1_1Matrix.html#a0497ef8d7f2ea30dd2c4e29cf645efcd',1,'math::Matrix::Matrix(const E &amp;expression)']]],
+  ['matrix_2ehpp_6',['matrix.hpp',['../df/dce/matrix_8hpp.html',1,'']]]
+];

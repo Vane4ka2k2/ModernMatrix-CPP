@@ -1,0 +1,35 @@
+PROJECT_NAME           = "NewMatrix"
+PROJECT_BRIEF          = "C++ Matrix library"
+PROJECT_NUMBER         = 1.0
+OUTPUT_DIRECTORY       = docs/doxygen
+CREATE_SUBDIRS         = YES
+OUTPUT_LANGUAGE        = Russian
+INPUT                  = matrix.hpp README.md
+FILE_PATTERNS          = *.hpp *.cpp *.md
+RECURSIVE              = NO
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+USE_MDFILE_AS_MAINPAGE = README.md
+GENERATE_TREEVIEW      = YES
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+STRIP_CODE_COMMENTS    = NO
+WARN_IF_UNDOCUMENTED   = NO
+
+# Поддержка UTF-8 и русскоязычных комментариев
+INPUT_ENCODING         = UTF-8
+
+# Игнорирование бинарных и вспомогательных путей
+EXCLUDE                = build
+
+# Поддержка Markdown в Doxygen
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+MULTILINE_CPP_IS_BRIEF = YES
+
+# Источник по умолчанию
+PROJECT_LOGO           = 
