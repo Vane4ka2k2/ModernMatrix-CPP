@@ -103,9 +103,12 @@ public:
     using reverse_iterator = std::reverse_iterator<iterator>;
     using const_reverse_iterator = std::reverse_iterator<const_iterator>;
 
-    // Конструктор по умолчанию.
-    // Для статической матрицы задаёт фиксированный размер и нулевую инициализацию,
-    // для динамической — создаёт матрицу размером 0x0.
+    /**
+     * \brief Конструктор по умолчанию.
+     * 
+     * Для статических матриц сохраняет фиксированные размеры и инициализирует элементы нулем.
+     * Для динамических матриц создает матрицу размером 0x0.
+     */
     Matrix() noexcept {
         if constexpr (has_static_rows) {
             rows_ = Rows;
@@ -118,14 +121,23 @@ public:
         }
     }
 
-    // Конструктор для динамических матриц, выделяет память и обнуляет элементы.
+    /**
+     * \brief Конструктор для создания динамической матрицы.
+     * \param rows Количество строк.
+     * \param cols Количество столбцов.
+     * \note Только для динамических матриц.
+     * \warning Выделяет память и бросает исключение если рассчиты превышают память.
+     */
     Matrix(size_type rows, size_type cols) requires (!is_static) {
         set_size(rows, cols);
         init_storage();
     }
 
-    // Конструктор из вложенного списка инициализации.
-    // Проверяет согласованность размеров строк.
+    /**
+     * \brief Конструктор из вложенного списка инициализации.
+     * \param init Нестед initializer list для строк и столбцов.
+     * \throw std::invalid_argument Если размеры не совпадают с статическими.
+     */
     Matrix(std::initializer_list<std::initializer_list<T>> init) {
         const size_type rows = init.size();
         const size_type cols = rows ? std::begin(init)->size() : 0;
@@ -242,6 +254,46 @@ public:
         return {data() + i * cols(), cols()};
     }
 
+    /**
+     * Вспомогательный класс для доступа к столбцу матрицы.
+     * Позволяет эффективно работать со столбцами несмежно хранящихся данных.
+     */
+    class ColumnProxy {
+    private:
+        T* data_;
+        size_type cols_;
+        size_type size_;
+    public:
+        ColumnProxy(T* data, size_type cols, size_type size) 
+            : data_(data), cols_(cols), size_(size) {}
+        T& operator[](size_type i) noexcept {
+            assert(i < size_);
+            return data_[i * cols_];
+        }
+        const T& operator[](size_type i) const noexcept {
+            assert(i < size_);
+            return data_[i * cols_];
+        }
+    };
+
+    /**
+     * Возвращает прокси-объект столбца для доступа через оператор [].
+     * Использование: T& val = matrix.col(j)[i];
+     * Примечание: столбцы менее эффективны для row-major layout.
+     */
+    ColumnProxy col(size_type j) noexcept {
+        assert(j < cols());
+        return ColumnProxy(data() + j, cols(), rows());
+    }
+
+    /**
+     * Константная версия метода col() для доступа к элементам столбца.
+     */
+    const ColumnProxy col(size_type j) const noexcept {
+        assert(j < cols());
+        return ColumnProxy(data() + j, cols(), rows());
+    }
+
     // Прокси-строка для доступа через оператор[]: matrix[i][j].
     struct RowProxy {
         T* row;
@@ -283,7 +335,10 @@ public:
         return data()[i * cols() + j];
     }
 
-    // Безопасный доступ с проверкой границ в любом режиме.
+    /**
+     * Безопасный доступ к элементу с проверкой границ.
+     * Бросает std::out_of_range при выходе за границы.
+     */
     T& at(size_type i, size_type j) {
         if (i >= rows() || j >= cols()) {
             throw std::out_of_range("Matrix index out of range");
@@ -291,6 +346,9 @@ public:
         return data()[i * cols() + j];
     }
 
+    /**
+     * Константная версия at() для безопасного доступа к элементу.
+     */
     const T& at(size_type i, size_type j) const {
         if (i >= rows() || j >= cols()) {
             throw std::out_of_range("Matrix index out of range");

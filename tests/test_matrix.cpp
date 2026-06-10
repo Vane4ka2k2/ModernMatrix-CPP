@@ -88,6 +88,41 @@ int main() {
         expect(loaded == m, "Stream I/O roundtrip failed");
     }
 
+    {
+        // Проверка безопасного доступа через at() с проверкой границ.
+        Matrix<double> m{{1.0, 2.0}, {3.0, 4.0}};
+        expect(m.at(0, 0) == 1.0, "at() access failed");
+        expect(m.at(1, 1) == 4.0, "at() access failed");
+        bool caught = false;
+        try {
+            m.at(2, 0);
+        } catch (const std::out_of_range&) {
+            caught = true;
+        }
+        expect(caught, "at() should throw out_of_range for invalid index");
+    }
+
+    {
+        // Проверка доступа к столбцам через col().
+        Matrix<double> m(3, 3);
+        m(0, 0) = 1.0; m(0, 1) = 2.0; m(0, 2) = 3.0;
+        m(1, 0) = 4.0; m(1, 1) = 5.0; m(1, 2) = 6.0;
+        m(2, 0) = 7.0; m(2, 1) = 8.0; m(2, 2) = 9.0;
+        
+        auto col0 = m.col(0);
+        expect(col0[0] == 1.0 && col0[1] == 4.0 && col0[2] == 7.0, "col() access failed");
+        
+        auto col1 = m.col(1);
+        expect(col1[0] == 2.0 && col1[1] == 5.0 && col1[2] == 8.0, "col() access failed");
+    }
+
+    {
+        // Проверка динамического изменения размера матрицы.
+        Matrix<double> m(2, 2);
+        m.resize(3, 3);
+        expect(m.rows() == 3 && m.cols() == 3, "resize() size change failed");
+    }
+
     std::cout << "All tests passed." << std::endl;
     return 0;
 }
