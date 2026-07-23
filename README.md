@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # рџ§® ModernMatrix-CPP вЂ” Р‘РёР±Р»РёРѕС‚РµРєР° Р»РёРЅРµР№РЅРѕР№ Р°Р»РіРµР±СЂС‹ РЅР° C++23
 
