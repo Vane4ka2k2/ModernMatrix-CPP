@@ -1,33 +1,92 @@
-# Build artifacts
-/build/
+﻿# ==========================================
+# C++ / CMake / Qt / Windows / IDE .gitignore
+# ==========================================
 
-# Doxygen generated documentation
-/docs/doxygen/
+# Prerequisites
+*.d
 
-# Temporary files
-*~
-*.swp
-*.tmp
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE/editor settings
-.vscode/
-
-# Compiled object files and executables
+# Compiled Object files
+*.slo
+*.lo
 *.o
 *.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran modules
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
 *.exe
 *.out
 *.app
 
-# CMake files
-CMakeFiles/
+# CMake build directories & files
+build/
+build-*/
+out/
+bin/
+obj/
 CMakeCache.txt
+CMakeFiles/
 cmake_install.cmake
-Makefile
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+*.cmake.user
+CMakePresets.json.user
 
-# Logs and temporary output
+# MSVC / Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.userosv
+*.sln.docstates
+*.userprefs
+*.ncb
+*.suo
+*.sln.docstates
+*.sdf
+*.opensdf
+*.unsuccessfulbuild
+*.ipch
+
+# Qt / Qt Creator
+.qtcreator/
+*.pro.user
+*.pro.user.*
+.qmake.stash
+ui_*.h
+qrc_*.cpp
+moc_*.cpp
+
+# VS Code / JetBrains IDEs
+.vscode/
+.idea/
+.clion/
+
+# OS generated files
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
+
+# Temporary / Log files
 *.log
+*.tmp
+*.bak
